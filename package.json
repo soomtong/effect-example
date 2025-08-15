@@ -1,19 +1,28 @@
 {
   "name": "effect-example",
-  "module": "index.ts",
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun --hot index.ts",
-    "start": "bun run index.ts",
-    "test": "bun test",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "format": "biome format .",
+    "format:fix": "biome format --write .",
+    "check": "biome check .",
+    "check:fix": "biome check --write .",
+    "db:connect": "bun run ./001-connect-database/connect-database.ts",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@types/bun": "latest",
-    "typescript": "^5"
+    "@biomejs/biome": "^2.2.0",
+    "@effect/language-service": "^0.35.2",
+    "@types/bun": "^1.2.20",
+    "typescript": "^5.8.2"
   },
   "dependencies": {
-    "effect": "^3"
+    "@effect/schema": "^0.75.5",
+    "@effect/sql": "^0.44.1",
+    "@effect/sql-mysql2": "^0.45.0",
+    "effect": "^3.17.0",
+    "mysql2": "^3.14.3"
   }
 }
