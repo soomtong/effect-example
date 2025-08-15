@@ -1,0 +1,33 @@
+# Node/Bun/TypeScript
+node_modules/
+bun.lockb
+bun-packages/
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+
+# Coverage & test output
+coverage/
+*.lcov
+
+# Transpiled output (if any build steps are added later)
+dist/
+build/
+
+# Bun runtime cache
+.bun/
+
+# Env files (Bun auto-loads .env)
+.env
+.env.*.local
+
+# Editor
+.vscode/
+.idea/
+*.sw?
