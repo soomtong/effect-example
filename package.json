@@ -10,13 +10,18 @@
     "check": "biome check .",
     "check:fix": "biome check --write .",
     "db:connect": "bun run ./001-connect-database/connect-database.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:watch": "vitest watch"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.0",
     "@effect/language-service": "^0.35.2",
+    "@effect/vitest": "^0.25.1",
     "@types/bun": "^1.2.20",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
     "@effect/schema": "^0.75.5",

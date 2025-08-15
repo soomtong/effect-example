@@ -1,7 +1,7 @@
 import { SqlClient } from '@effect/sql';
 import { MysqlClient } from '@effect/sql-mysql2';
 import { Duration, Effect, Schedule } from 'effect';
-import { grapMysqlConfig } from './common-util';
+import { grapMysqlConfig } from '../shared/common-util';
 
 /**
  * 환경변수에서 제공 받은 데이터베이스 접속 정보를 바탕으로
