@@ -6,6 +6,7 @@
       "dependencies": {
         "@effect/schema": "^0.75.5",
         "@effect/sql": "^0.44.1",
+        "@effect/sql-kysely": "^0.40.0",
         "@effect/sql-mysql2": "^0.45.0",
         "effect": "^3.17.0",
         "mysql2": "^3.14.3",
@@ -48,6 +49,8 @@
     "@effect/schema": ["@effect/schema@0.75.5", "", { "dependencies": { "fast-check": "^3.21.0" }, "peerDependencies": { "effect": "^3.9.2" } }, "sha512-TQInulTVCuF+9EIbJpyLP6dvxbQJMphrnRqgexm/Ze39rSjfhJuufF7XvU3SxTgg3HnL7B/kpORTJbHhlE6thw=="],
 
     "@effect/sql": ["@effect/sql@0.44.1", "", { "dependencies": { "@opentelemetry/semantic-conventions": "^1.33.0", "uuid": "^11.0.3" }, "peerDependencies": { "@effect/experimental": "^0.54.4", "@effect/platform": "^0.90.0", "effect": "^3.17.6" } }, "sha512-h8/WdEG+dswVcN6QjAZRFT7AJ8g3wHMQFR9b8ul14idqXuBcPZxx9OFSsUT3tOTtUKmRMrlU8iMiUq0LIsm5SQ=="],
+
+    "@effect/sql-kysely": ["@effect/sql-kysely@0.40.0", "", { "dependencies": { "@opentelemetry/semantic-conventions": "^1.33.0" }, "peerDependencies": { "@effect/sql": "^0.44.0", "effect": "^3.17.0", "kysely": "^0.28.2" } }, "sha512-yzUhW2rez+AoaGwCmDC+wmVJXZh6zVRjBH4ZVchkovuxUJRZ7AmXlrI25K6fhxvYBhYvRCKyxSSkqDY5pbBePg=="],
 
     "@effect/sql-mysql2": ["@effect/sql-mysql2@0.45.0", "", { "dependencies": { "@opentelemetry/semantic-conventions": "^1.33.0", "mysql2": "^3.11.0" }, "peerDependencies": { "@effect/experimental": "^0.54.0", "@effect/platform": "^0.90.0", "@effect/sql": "^0.44.0", "effect": "^3.17.0" } }, "sha512-JwsJYiK6f7iqSSVw6nz0TSgA/5PmKNzMeDlG3lUt7RQfg+LmxSbbE41bNaTnv8F4KdQjE9f0v4VVGeYJI7jPVw=="],
 
@@ -236,6 +239,8 @@
     "is-property": ["is-property@1.0.2", "", {}, "sha512-Ks/IoX00TtClbGQr4TWXemAnktAQvYB7HzcCxDGqEZU6oCmb2INHuOoKxbtR+HFkmYWBKv/dOZtGRiAjDhj92g=="],
 
     "js-tokens": ["js-tokens@9.0.1", "", {}, "sha512-mxa9E9ITFOt0ban3j6L5MpjwegGz6lBQmM1IJkWeBZGcMxto50+eWdjC/52xDbS2vy0k7vIMK0Fe2wfL9OQSpQ=="],
+
+    "kysely": ["kysely@0.28.5", "", {}, "sha512-rlB0I/c6FBDWPcQoDtkxi9zIvpmnV5xoIalfCMSMCa7nuA6VGA3F54TW9mEgX4DVf10sXAWCF5fDbamI/5ZpKA=="],
 
     "long": ["long@5.3.2", "", {}, "sha512-mNAgZ1GmyNhD7AuqnTG3/VQ26o760+ZYBPKjPvugO8+nLbYfX6TVpJPseBvopbdY+qpZ/lKUnmEc1LeZYS3QAA=="],
 

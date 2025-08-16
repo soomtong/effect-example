@@ -26,6 +26,7 @@
   "dependencies": {
     "@effect/schema": "^0.75.5",
     "@effect/sql": "^0.44.1",
+    "@effect/sql-kysely": "^0.40.0",
     "@effect/sql-mysql2": "^0.45.0",
     "effect": "^3.17.0",
     "mysql2": "^3.14.3"

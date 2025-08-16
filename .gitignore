@@ -27,6 +27,9 @@ build/
 .env
 .env.*.local
 
+# Crush
+.crush/
+
 # Editor
 .vscode/
 .idea/
