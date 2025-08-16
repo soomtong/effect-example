@@ -20,6 +20,12 @@ bun run 001-connect-database/connect-database.ts
 bun run 002-query-database/query-data.ts
 ```
 
+### 003-kysely-mysql-database: Kysely ORM 사용
+```bash
+bun run 003-kysely-mysql-database/select-query.ts
+bun run 003-kysely-mysql-database/user-service.ts
+```
+
 ## 주요 기능
 
 ### 001-connect-database
@@ -30,10 +36,16 @@ bun run 002-query-database/query-data.ts
 
 ### 002-query-database
 - **모듈화된 구조**: 연결, 쿼리, 재시도 정책을 별도 파일로 분리
-- **스키마 검증**: Effect Schema를 사용한 타입 안전한 데이터 검증
 - **JOIN 쿼리**: customer와 user 테이블 조인 쿼리 실행
 - **서비스 패턴**: 데이터베이스 서비스 객체 패턴 구현
 - **함수형 프로그래밍**: pipe를 사용한 함수형 컴포지션
+
+### 003-kysely-mysql-database
+- **Kysely ORM**: 타입 안전한 SQL 쿼리 빌더 사용
+- **스키마 정의**: TypeScript 인터페이스로 데이터베이스 스키마 정의
+- **Context 패턴**: Effect의 Context를 활용한 의존성 주입
+- **서비스 레이어**: 비즈니스 로직과 데이터 접근 계층 분리
+- **타입 추론**: 컴파일 타임에 SQL 쿼리 타입 검증
 
 ## 환경 변수
 
@@ -57,6 +69,12 @@ effect-example/
 │   ├── connection.ts          # 데이터베이스 연결 모듈
 │   ├── query-data.ts          # 고급 쿼리 실행 예제
 │   └── retry-policy.ts        # 재시도 정책 정의
+├── 003-kysely-mysql-database/
+│   ├── connect-kysely.ts      # Kysely 연결 설정
+│   ├── kysely-schema.ts       # 데이터베이스 스키마 정의
+│   ├── find-users.ts          # 사용자 조회 함수
+│   ├── select-query.ts        # Kysely 쿼리 실행 예제
+│   └── user-service.ts        # 사용자 서비스 레이어
 └── shared/
     └── common-util.ts         # 공통 유틸리티 함수
 ```
