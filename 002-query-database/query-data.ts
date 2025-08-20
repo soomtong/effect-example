@@ -22,15 +22,16 @@ const executeQuery = (sql: SqlClient.SqlClient, username: string) =>
   Effect.gen(function* () {
     yield* Effect.log('쿼리를 실행합니다...');
 
-    const customerTable = 'customer';
     const userTable = 'user';
-    const limit = 10;
+    const customerTable = 'customer';
     const fields = ['c.id as id', 'c.site as site', 'c.name as name', 'u.username as username'];
+    const query = `${username}%`
+    const limit = 2;
 
     const rawCustomers = yield* sql<CustomerWithUser>`
-        SELECT ${sql.unsafe(fields.join(', '))}
-        FROM ${sql(customerTable)} as c left join ${sql(userTable)} as u on c.user_id = u.id 
-        WHERE u.username like '${sql.unsafe(username)}%' limit ${sql.unsafe(limit.toString())}`;
+        SELECT ${sql.csv(fields)}
+        FROM ${sql(customerTable)} as c left join ${sql(userTable)} as u on c.user_id = u.id
+        WHERE u.username like ${query} limit ${sql.literal(`${limit}`)}`;
 
     yield* Effect.log(`쿼리 실행 완료: ${rawCustomers.length}개 결과`);
     return rawCustomers;
